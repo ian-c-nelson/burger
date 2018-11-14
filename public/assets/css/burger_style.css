@@ -1,1 +1,15 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Prosto+One|Audiowide');
 
+body {
+    font-family: 'Prosto One', cursive;
+}
+
+.navbar-brand {
+    font-family: 'Audiowide', cursive;
+    font-size: xx-large;
+}
+
+.burger-text {
+    margin-left: 1rem;
+}
