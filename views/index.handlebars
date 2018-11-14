@@ -1,0 +1,34 @@
+<div class="card my-2">
+  <h5 class="card-header">Burgers that are waiting to be devoured!</h5>
+  <div class="card-body">
+    <ul class="list-group">
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+    <form class="create-form">
+      <div class="input-group my-1">
+        <input id="burger-name-input" type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name"
+          aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="add-burger-button">Add burger</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card my-2">
+  <h5 class="card-header">Ate them up yum!</h5>
+  <div class="card-body">
+    <ul class="list-group">
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
